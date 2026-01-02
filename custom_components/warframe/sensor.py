@@ -423,6 +423,8 @@ class InvasionSensor(WorldStateSesnor):
                 data.append({
                     "node": invasion.get("node"),
                     "rewardTypes": invasion.get("rewardTypes"),
+                    "attackerReward": invasion.get("attacker").get("reward"),
+                    "defenderReward": invasion.get("defender").get("reward"),
                     "enemy": invasion.get("defender").get("faction")
                 })
         self._attr_extra_state_attributes = {"invasions":data}
